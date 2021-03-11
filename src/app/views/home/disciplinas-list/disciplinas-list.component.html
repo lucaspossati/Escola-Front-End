@@ -1,0 +1,38 @@
+<table style="width: 100%; text-align: center; ">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id do Aluno</th>
+            <th>Nome do Livro</th>
+            <th>Ano de Lançamento</th>
+            <th>Genero</th>
+            <th>RA do Aluno</th>
+        </tr>
+        
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let discliplina of disciplinas">
+            <td>
+                {{discliplina.Id}}
+            </td>
+            <td>
+                {{discliplina.NomeDisciplina}}
+            </td>
+            <td>
+                {{discliplina.NomeProfessor}}
+            </td>
+            <td>
+                {{discliplina.Ementa}}
+            </td>
+            <td>
+                {{discliplina.Curso}}
+            </td>
+            <td>
+                {{discliplina.Periodo}}
+            </td>
+        </tr>
+    </tbody>   
+    
+</table>
+    

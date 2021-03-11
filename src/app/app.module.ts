@@ -13,6 +13,9 @@ import { AlunoListComponent } from './views/home/aluno-list/aluno-list.component
 import {MatTabsModule} from '@angular/material/tabs';;
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { DisciplinasListComponent } from './views/home/disciplinas-list/disciplinas-list.component';
+import { BibliotecaListComponent } from './views/home/biblioteca-list/biblioteca-list.component';
+import { LoginComponent } from './views/home/login/login.component';
 
 
 
@@ -20,7 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     HomeComponent,
-    AlunoListComponent
+    AlunoListComponent,
+    DisciplinasListComponent,
+    BibliotecaListComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,

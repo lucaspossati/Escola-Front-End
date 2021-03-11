@@ -1,50 +1,40 @@
-<mat-tab-group style="padding-top: 30px; padding-left: 1%; padding-right: 1%;">
-    <mat-tab label="Id">
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Data de Nascimento</th>
-                    <th>RA</th>
-                    <th>Curso</th>
-                    <th>Semestre</th>
-                </tr>
-                
-            </thead>
+<table style="width: 100%; text-align: center;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>RA</th>
+            <th>Curso</th>
+            <th>Semestre</th>
+        </tr>
+        
+    </thead>
 
-            <tbody>
-                <tr *ngFor="let aluno of alunos">
-                    <td>
-                        {{aluno.Id}}
-                    </td>
-                    <td>
-                        {{aluno.Nome}}
-                    </td>
-                    <td>
-                        {{aluno.DataNascimento}}
-                    </td>
-                    <td>
-                        {{aluno.RA}}
-                    </td>
-                    <td>
-                        {{aluno.Curso}}
-                    </td>
-                    <td>
-                        {{aluno.Semestre}}
-                    </td>
-                </tr>
-            </tbody>
-            
-            
-            
-        </table>
-    </mat-tab>
-    <mat-tab label="Nome"> Content 2 </mat-tab>
-    <mat-tab label="Data de Nascimento"> Content 3 </mat-tab>
-    <mat-tab label="RA"> Content 1 </mat-tab>
-    <mat-tab label="Curso"> Content 2 </mat-tab>
-    <mat-tab label="Semestre"> Content 1 </mat-tab>
-    <mat-tab label="Teste"> Content 2 </mat-tab>
-</mat-tab-group>
+    <tbody>
+        <tr *ngFor="let aluno of alunos">
+            <td>
+                {{aluno.Id}}
+            </td>
+            <td>
+                {{aluno.Nome}}
+            </td>
+            <td>
+                {{aluno.DatadeNascimento}}
+            </td>
+            <td>
+                {{aluno.RA}}
+            </td>
+            <td>
+                {{aluno.Curso}}
+            </td>
+            <td>
+                {{aluno.Semestre}}
+            </td>
+        </tr>
+    </tbody>
+    
+
+</table>
+    
   

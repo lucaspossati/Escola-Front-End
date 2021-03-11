@@ -1,10 +1,19 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row style="font-size: 1.5rem; height: 80px;">
-      <span>Alunos<mat-icon >account_circle</mat-icon></span>
+      <span>Escola<mat-icon >school</mat-icon></span>
       <span class="example-spacer"></span>
-      <button mat-raised-button style="margin-left: 20px;">Adicionar <mat-icon >add</mat-icon></button>
+      
       
     </mat-toolbar-row>
 
 </mat-toolbar>
-<app-aluno-list></app-aluno-list>
+
+<mat-tab-group style="padding-top: 30px; padding-left: 1%; padding-right: 1%;">
+
+  <mat-tab label="Alunos"> <app-aluno-list></app-aluno-list> </mat-tab>
+  <mat-tab label="Disciplinas"> <app-disciplinas-list></app-disciplinas-list> </mat-tab>
+  <mat-tab label="Biblioteca"> <app-biblioteca-list></app-biblioteca-list> </mat-tab>
+
+</mat-tab-group>
+
+    
