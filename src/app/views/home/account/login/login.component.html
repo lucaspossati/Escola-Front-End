@@ -1,0 +1,20 @@
+
+
+<div class="containerMain"></div>
+
+<h2 class="text-center">Entrar</h2>
+
+<div class="container"  style="width: 500px;">
+<form #form="ngForm">
+  <div class="form-group">
+    <label>Usuario</label><br>
+    <input class="form-control" type="text" name="login" id="login" [(ngModel)]="login.login" required [disabled]="carregando == true"/>
+  </div>
+  <div class="form-group">
+    <label>Senha</label><br>
+    <input class="form-control" type="password" name="senha" id="senha" [(ngModel)]="login.senha" required [disabled]="carregando == true" />
+  </div>
+  <button class="btn btn-primary btn-block" [disabled]="form.invalid || carregando == true" (click)="loginFn()">Entrar <mat-icon >login</mat-icon></button><br>
+  <li><a routerLink="/home" routerLinkActive="active">Home</a>
+</form>
+</div>

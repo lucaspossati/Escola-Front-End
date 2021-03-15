@@ -1,0 +1,51 @@
+.containerMain{
+    background-image: url('https://coloredbrain.com/wp-content/uploads/2016/07/login-background.jpg');
+}
+
+
+.container{
+    color: rgb(92, 91, 91);
+
+}
+
+
+.text-center{
+    margin-left: 32%;
+    font-size: 30px;
+    color: rgb(49, 49, 49);
+}
+
+.form-control{
+    width: 400px;
+    height: 28px;
+    border: 0.1px solid grey;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.btn-primary.btn-block{
+    width: 406px;
+    text-align: center;
+    margin-top: 20px;
+    height: 35px;
+    background-color: rgb(62, 181, 228);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+.form-control:hover{
+   border: 1px solid rgb(62, 181, 228);
+}
+
+.form-control:click{
+    border: 1px solid rgb(62, 181, 228);
+ }
+
+
+
+
+

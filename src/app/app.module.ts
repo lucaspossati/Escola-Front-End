@@ -15,8 +15,9 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { DisciplinasListComponent } from './views/home/disciplinas-list/disciplinas-list.component';
 import { BibliotecaListComponent } from './views/home/biblioteca-list/biblioteca-list.component';
-import { LoginComponent } from './views/home/login/login.component';
-
+import { LoginComponent } from './views/home/account/login/login.component';
+import { FormsModule }   from '@angular/forms';
+import { AuthenticationComponent } from './views/home/layout/authentication/authentication.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoginComponent } from './views/home/login/login.component';
     AlunoListComponent,
     DisciplinasListComponent,
     BibliotecaListComponent,
-    LoginComponent
+    LoginComponent,
+    AuthenticationComponent
   ],
   imports: [
     HttpClientModule,
@@ -37,7 +39,10 @@ import { LoginComponent } from './views/home/login/login.component';
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

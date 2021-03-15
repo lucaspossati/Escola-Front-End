@@ -5,8 +5,6 @@ export class Aluno{
     ra: number;
     curso: string;
     semestre: number;
-    teste: string;
-
-    
+    teste: string;  
 }
 
