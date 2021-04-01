@@ -15,6 +15,15 @@
     <input class="form-control" type="password" name="senha" id="senha" [(ngModel)]="login.senha" required [disabled]="carregando == true" />
   </div>
   <button class="btn btn-primary btn-block" [disabled]="form.invalid || carregando == true" (click)="loginFn()">Entrar <mat-icon >login</mat-icon></button><br>
-  <li><a routerLink="/home" routerLinkActive="active">Home</a>
+  <div *ngIf="loading == true" >
+    <mat-spinner [diameter]="30" style="margin-left: 36%;"></mat-spinner>
+  </div>
+  <p *ngIf="senhaInvalida == true" style="color: red;">Usuário ou senha inválidos. Tente novamente!</p>
+
+  
+  <ngx-recaptcha2 #captchaElem [siteKey]="siteKey"></ngx-recaptcha2>
+  
 </form>
 </div>
+
+<div ngfor></div>

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tokenize } from '@angular/compiler/src/ml_parser/lexer';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -16,6 +16,22 @@ export class AccountService {
     return this.http.post<any>(environment.api + "/api/alunoss/login", login);
   }
 
+  gerarToken(login: AlunoLogin): Observable<any> {
+
+    let headers = new HttpHeaders();
+        headers = headers.append("Content-Type", 'application/x-www-form-urlencoded');
+        headers = headers.append("Access-Control-Allow-Origin", '*');
+        headers = headers.append('Access-Control-Allow-Credentials', 'true');
+
+        var creds = 'username=' + login.login + '&password=' + login.senha + "&grant_type=password" + "&credentials=true";
+        
+    return this.http.post<any>(environment.api + "/token", creds, { headers: headers });
+
+  }
+
+  alunosUrl = 'https://localhost:44311/api/alunoss/aluno';
+  alunosID = 'https://localhost:44311/api/alunoss/getAlunosbyID';
+
   //Serviço seta Objeto do usuario logado
   setarObjUsuarioLogado(Usuario) {
     sessionStorage.setItem("UsuarioLogadoObj-EstudosLucas", Usuario);
@@ -26,10 +42,19 @@ export class AccountService {
     return JSON.parse(sessionStorage.getItem("UsuarioLogadoObj-EstudosLucas"));
   } 
 
+  criarAlunos(aluno:any){
+    return this.http.post(this.alunosUrl, aluno);
+  }
+
+  getAlunobyID(aluno:any){
+    return this.http.get(this.alunosID, aluno.id);
+  }
+
   //Serviço remove os parametros de usuário logado
   deslogar() {
     // sessionStorage.setItem("Token-MRA", null);    
-    sessionStorage.setItem("UsuarioLogadoObj-EstudosLucas", null);    
+    sessionStorage.setItem("UsuarioLogadoObj-EstudosLucas", null);  
+    sessionStorage.setItem("token-access", null);    
   }
 
   // async login(login: any) {

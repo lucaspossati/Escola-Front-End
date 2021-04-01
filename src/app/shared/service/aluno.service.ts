@@ -22,4 +22,6 @@ export class AlunoService {
   public getAlunosWithFlag(flag: string): Observable<any> {
     return this.httpClient.get<any>(this.apiUrl + '?flag='+flag);
   }
+
+  
 }

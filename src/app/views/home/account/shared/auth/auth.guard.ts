@@ -9,10 +9,12 @@ import { AccountService } from '../account/account.service';
 export class AuthGuard implements CanActivate {
 
   constructor(private router: Router, private accountService: AccountService){}
-
+  
   canActivate( next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean  {
     
+    
     const token = window.localStorage.getItem('token');
+    
     const alunoLogado = this.accountService.ObjUsuarioLogado();
     if (alunoLogado == null) {
       this.router.navigate(['login']);

@@ -12,13 +12,17 @@ import {MatButtonModule} from '@angular/material/button';
 import { AlunoListComponent } from './views/home/aluno-list/aluno-list.component';
 import {MatTabsModule} from '@angular/material/tabs';;
 import { MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DisciplinasListComponent } from './views/home/disciplinas-list/disciplinas-list.component';
 import { BibliotecaListComponent } from './views/home/biblioteca-list/biblioteca-list.component';
 import { LoginComponent } from './views/home/account/login/login.component';
 import { FormsModule }   from '@angular/forms';
 import { AuthenticationComponent } from './views/home/layout/authentication/authentication.component';
-
+import { CustomHttpInterceptor } from './custom-http-interceptor';
+import { CadastrarAlunosComponent } from './views/home/aluno-list/cadastrar-alunos/cadastrar-alunos.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { AuthenticationComponent } from './views/home/layout/authentication/auth
     DisciplinasListComponent,
     BibliotecaListComponent,
     LoginComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    CadastrarAlunosComponent,
+  
   ],
   imports: [
     HttpClientModule,
@@ -42,9 +48,19 @@ import { AuthenticationComponent } from './views/home/layout/authentication/auth
     MatTableModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    NgxCaptchaModule
+    
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CustomHttpInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,7 +21,11 @@
     "@angular/platform-browser": "~11.2.4",
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
+    "@material/fab": "^10.0.0",
+    "angular2-jwt": "^0.2.3",
+    "ngx-captcha": "^9.0.1",
     "rxjs": "~6.6.0",
+    "rxjs-compat": "^6.6.6",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
