@@ -1,27 +1,16 @@
 # EscolaFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+# Tela de Login
+![alt text](https://uploaddeimagens.com.br/images/003/229/281/original/login.png?1620312863)
 
-## Development server
+# Tela contendo a lista de alunos cadastrados
+![alt text](https://uploaddeimagens.com.br/images/003/229/283/original/lista-alunos.png?1620312913)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Modal para adicionar novo aluno
+![alt text](https://uploaddeimagens.com.br/images/003/229/287/original/cadastrar-aluno.png?1620313004)
 
-## Code scaffolding
+# Exclusão do aluno
+![alt text](https://uploaddeimagens.com.br/images/003/229/292/original/exclus%C3%A3o-do-aluno.png?1620313098)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
