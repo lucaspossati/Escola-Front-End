@@ -11,6 +11,10 @@
 ### Modal para adicionar novo aluno
 ![alt text](https://uploaddeimagens.com.br/images/003/229/287/original/cadastrar-aluno.png?1620313004)
 
+### Modal para adicionar onde pode ser pesquisado um aluno por ID
+![alt text](https://uploaddeimagens.com.br/images/003/229/579/original/pesquisar-aluno.png?1620318345)
+
+
 ### Exclusão do aluno
 ![alt text](https://uploaddeimagens.com.br/images/003/229/292/original/exclus%C3%A3o-do-aluno.png?1620313098)
 
