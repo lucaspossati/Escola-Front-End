@@ -1,9 +1,9 @@
 # EscolaFrontend
 
-# Tela de Login
+## Tela de Login
 ![alt text](https://uploaddeimagens.com.br/images/003/229/281/original/login.png?1620312863)
 
-# Tela contendo a lista de alunos cadastrados
+### Tela contendo a lista de alunos cadastrados
 ![alt text](https://uploaddeimagens.com.br/images/003/229/283/original/lista-alunos.png?1620312913)
 
 # Modal para adicionar novo aluno
