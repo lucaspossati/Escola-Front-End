@@ -1,5 +1,5 @@
 # Escola
-##### Esse foi o meu primeiro projeto desenvolvido utilizando o Angular 11 no Front-End e no Back-End temos uma comunicação com o ASP.NET, que foi utilizado o Entity Framework para construir a Web API. 
+##### O projeto da escola foi desenvolvido com o intuito de aperfeiçoar os meus conhecimentos em Angular 11 e melhorar as minhas habilidades no desenvolvimento de Web APIs. Esse foi o meu primeiro projeto de CRUD com Angular 11 integrado com o ASP.NET, que foi utilizado o Entity Framework para construir a API. 
 
 ### Tela de Login
 ![alt text](https://uploaddeimagens.com.br/images/003/229/281/original/login.png?1620312863)
