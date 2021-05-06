@@ -15,7 +15,8 @@
 ![alt text](https://uploaddeimagens.com.br/images/003/229/292/original/exclus%C3%A3o-do-aluno.png?1620313098)
 
 ##### ---------------------------------------------------------------------------------------------------------------------------------------------------
-##### Esse CRUD também foi desenvolvido para a classe biblioteca e disciplinas.
+##### Esse CRUD também foi desenvolvido para a classe biblioteca, que possui o cadastro de todos os livros da biblioteca, e disciplinas.
+##### Link para o repositório do Back-End da aplicação: 
 
 
 
