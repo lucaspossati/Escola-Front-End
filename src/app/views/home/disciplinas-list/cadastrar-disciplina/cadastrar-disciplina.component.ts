@@ -53,6 +53,8 @@ export class CadastrarDisciplinaComponent implements OnInit {
 
   getDisciplinabyID(disciplinaId){
     this.accountService.getDisciplinabyID(disciplinaId).subscribe(data => {
+
+      console.log(data);
       
       if(data != null){
 

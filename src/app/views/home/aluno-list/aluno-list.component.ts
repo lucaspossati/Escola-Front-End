@@ -78,7 +78,7 @@ export class AlunoListComponent implements OnInit {
     Swal.fire({
       title: 'Aluno deletado com sucesso',
       icon: 'success',
-      confirmButtonText: 'Fechar',
+      timer: 2000
     }).then((result) => {
       this.refresh();
     })

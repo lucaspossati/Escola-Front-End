@@ -70,7 +70,7 @@ export class DisciplinasListComponent implements OnInit {
     Swal.fire({
       title: 'Disciplina deletada com sucesso',
       icon: 'success',
-      confirmButtonText: 'Fechar',
+      timer: 2000
     }).then((result) => {
       this.refresh();
     })
@@ -81,7 +81,7 @@ export class DisciplinasListComponent implements OnInit {
     Swal.fire({
       title: 'Não foi possivel excluir a disciplina',
       icon: 'error',
-      confirmButtonText: 'Fechar',
+      timer: 2000
     })
   }
 

@@ -99,7 +99,7 @@ export class LoginComponent implements OnInit {
     Swal.fire({
       title: 'Usuário ou senha inválidos',
       icon: 'error',
-      confirmButtonText: 'Fechar',     
+      timer: 2000   
     })
   }
 
@@ -108,7 +108,7 @@ export class LoginComponent implements OnInit {
     Swal.fire({
       title: 'Usuário autenticado',
       icon: 'success',
-      confirmButtonText: 'Fechar',     
+      timer: 2000   
     })
   }
 

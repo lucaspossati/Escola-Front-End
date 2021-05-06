@@ -7,40 +7,40 @@
  
        <mat-form-field class="example-full-width">
           <mat-label>Id</mat-label>
-          <input matInput placeholder="id" (keyup.enter)="getAlunosbyID(disciplina.Id)" [(ngModel)]="disciplina.Id"
-             name="filterName" required>
+          <input matInput placeholder="id" (keyup.enter)="getDisciplinabyID(disciplina.Id)" [(ngModel)]="disciplina.Id"
+             name="id" required>
  
        </mat-form-field>
  
-       <button type="submit" mat-stroked-button color="green" (click)="getAlunosbyID(disciplina.Id)"
+       <button type="submit" mat-stroked-button color="green" (click)="getDisciplinabyID(disciplina.Id)"
           style="float: center;">Pesquisar <mat-icon>search</mat-icon>
        </button>
  
        <mat-form-field class="example-full-width">
           <mat-label>Nome da Disciplina</mat-label>
-          <input matInput placeholder="nome" [(ngModel)]="disciplina.NomeDisciplina" name="nome" required>
+          <input matInput placeholder="nome" [(ngModel)]="disciplina.NomeDisciplina" name="nome-da-disciplina" required>
  
        </mat-form-field>
  
  
        <mat-form-field class="example-full-width">
           <mat-label>Nome do Professor</mat-label>
-          <input matInput placeholder="DatadeNascimento" [(ngModel)]="disciplina.NomeProfessor" name="filterName" required>
+          <input matInput placeholder="DatadeNascimento" [(ngModel)]="disciplina.NomeProfessor" name="nome-professor" required>
        </mat-form-field>
  
        <mat-form-field class="example-full-width">
           <mat-label>Ementa</mat-label>
-          <input matInput placeholder="Ementa" [(ngModel)]="disciplina.Ementa" name="filterName" required>
+          <input matInput placeholder="Ementa" [(ngModel)]="disciplina.Ementa" name="ementa" required>
        </mat-form-field>
  
        <mat-form-field class="example-full-width">
           <mat-label>Curso</mat-label>
-          <input matInput placeholder="Curso" [(ngModel)]="disciplina.Curso" name="filterName" required>
+          <input matInput placeholder="Curso" [(ngModel)]="disciplina.Curso" name="curso" required>
        </mat-form-field>
  
        <mat-form-field class="example-full-width">
           <mat-label>Periodo</mat-label>
-          <input matInput placeholder="Periodo" [(ngModel)]="disciplina.Periodo" name="filterName" required>
+          <input matInput placeholder="Periodo" [(ngModel)]="disciplina.Periodo" name="periodo" required>
        </mat-form-field>  
  
        <button class="float-none botao-salvar" type="submit" mat-stroked-button color="green" (click)="criarDisciplina()">Salvar

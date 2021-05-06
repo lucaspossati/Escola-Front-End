@@ -75,16 +75,16 @@ export class AccountService {
 
   //Gets
 
-  getAlunobyID(disciplinaId: any){
-    return this.http.get<Aluno>(this.disciplinaId + disciplinaId);
+  getAlunobyID(alunoId: any){
+    return this.http.get<Aluno>(this.alunosID + alunoId);
   }
 
   getLivrobyID(livroId: any){
     return this.http.get<Biblioteca>(this.livroID + livroId);
   }
 
-  getDisciplinabyID(livroId: any){
-    return this.http.get<Disciplina>(this.livroID + livroId);
+  getDisciplinabyID(disciplinaId: any){
+    return this.http.get<Disciplina>(this.disciplinaId + disciplinaId);
   }
 
   //Delete

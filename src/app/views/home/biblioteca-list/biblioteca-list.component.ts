@@ -69,10 +69,9 @@ export class BibliotecaListComponent implements OnInit {
     Swal.fire({
       title: 'Livro deletado com sucesso',
       icon: 'success',
-      confirmButtonText: 'Fechar',
-    }).then((result) => {
-      this.refresh();
-    })
+      timer: 2000
+     });
+    
   }
 
   alertErroAoExcluir() {
@@ -80,7 +79,7 @@ export class BibliotecaListComponent implements OnInit {
     Swal.fire({
       title: 'Não foi possivel excluir o livro',
       icon: 'error',
-      confirmButtonText: 'Fechar',
+      timer: 2000
     })
   }
 
