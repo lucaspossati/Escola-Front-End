@@ -23,6 +23,10 @@ import { CadastrarAlunosComponent } from './views/home/aluno-list/cadastrar-alun
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CadastrarBibliotecaComponent } from './views/home/biblioteca-list/cadastrar-biblioteca/cadastrar-biblioteca.component';
+import { CadastrarDisciplinaComponent } from './views/home/disciplinas-list/cadastrar-disciplina/cadastrar-disciplina.component';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +38,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     LoginComponent,
     AuthenticationComponent,
     CadastrarAlunosComponent,
+    CadastrarBibliotecaComponent,
+    CadastrarDisciplinaComponent,
   
   ],
   imports: [
@@ -51,7 +57,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     HttpClientModule,
     MatInputModule,
     MatProgressSpinnerModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    NgbModule
     
   ],
   providers: [

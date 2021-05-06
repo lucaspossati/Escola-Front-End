@@ -1,0 +1,60 @@
+<ng-template #content let-modal>
+   
+    <div class="modal-body  align-center">
+ 
+       <h1 class="modal-title" id="modal-basic-title">Cadastrar Livro
+       </h1>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input matInput placeholder="id" (keyup.enter)="getLivrobyID(livro.Id)" [(ngModel)]="livro.Id"
+             name="filterName" required>
+ 
+       </mat-form-field>
+ 
+       <button type="submit" mat-stroked-button color="green" (click)="getLivrobyID(livro.Id)"
+          style="float: center;">Pesquisar <mat-icon>search</mat-icon>
+       </button>
+
+       <mat-form-field class="example-full-width">
+          <mat-label>Id do Aluno</mat-label>
+          <input matInput placeholder="Id do Aluno"  [(ngModel)]="livro.AlunoID" name="nome" required>
+ 
+       </mat-form-field>
+ 
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Nome do Livro</mat-label>
+          <input matInput placeholder="Nome do Livro" [(ngModel)]="livro.NomeLivro" name="filterName" required>
+       </mat-form-field>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Ano de Lançamento</mat-label>
+          <input matInput placeholder="Ano de Lançamento" [(ngModel)]="livro.AnoLancamento" name="filterName" required>
+       </mat-form-field>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Genero</mat-label>
+          <input matInput placeholder="Genero" [(ngModel)]="livro.Genero" name="filterName" required>
+       </mat-form-field>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>RA do Aluno</mat-label>
+          <input matInput placeholder="semestre" [(ngModel)]="livro.RA" name="filterName" required>
+       </mat-form-field>    
+ 
+       <button class="float-none botao-salvar" type="submit" mat-stroked-button color="green" (click)="criarBiblioteca()">Salvar
+          <mat-icon>save</mat-icon>
+       </button>
+       <button class="float-none botao-cancelar" type="button" mat-stroked-button aria-label="Close" (click)="modal.dismiss('Cross click')">Cancelar
+          <mat-icon>close</mat-icon>
+       </button>
+ 
+ 
+    </div>
+ 
+ </ng-template>
+ 
+ <button class="btn btn-outline-primary float-right botao-add-aluno" (click)="open(content)">
+    <mat-icon>add_circle</mat-icon>
+ </button>

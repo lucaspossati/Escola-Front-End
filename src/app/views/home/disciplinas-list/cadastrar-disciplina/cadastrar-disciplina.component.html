@@ -1,0 +1,60 @@
+<ng-template #content let-modal>
+   
+    <div class="modal-body  align-center">
+ 
+       <h1 class="modal-title" id="modal-basic-title">Cadastrar Disciplina
+       </h1>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input matInput placeholder="id" (keyup.enter)="getAlunosbyID(disciplina.Id)" [(ngModel)]="disciplina.Id"
+             name="filterName" required>
+ 
+       </mat-form-field>
+ 
+       <button type="submit" mat-stroked-button color="green" (click)="getAlunosbyID(disciplina.Id)"
+          style="float: center;">Pesquisar <mat-icon>search</mat-icon>
+       </button>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Nome da Disciplina</mat-label>
+          <input matInput placeholder="nome" [(ngModel)]="disciplina.NomeDisciplina" name="nome" required>
+ 
+       </mat-form-field>
+ 
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Nome do Professor</mat-label>
+          <input matInput placeholder="DatadeNascimento" [(ngModel)]="disciplina.NomeProfessor" name="filterName" required>
+       </mat-form-field>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Ementa</mat-label>
+          <input matInput placeholder="Ementa" [(ngModel)]="disciplina.Ementa" name="filterName" required>
+       </mat-form-field>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Curso</mat-label>
+          <input matInput placeholder="Curso" [(ngModel)]="disciplina.Curso" name="filterName" required>
+       </mat-form-field>
+ 
+       <mat-form-field class="example-full-width">
+          <mat-label>Periodo</mat-label>
+          <input matInput placeholder="Periodo" [(ngModel)]="disciplina.Periodo" name="filterName" required>
+       </mat-form-field>  
+ 
+       <button class="float-none botao-salvar" type="submit" mat-stroked-button color="green" (click)="criarDisciplina()">Salvar
+          <mat-icon>save</mat-icon>
+       </button>
+       <button class="float-none botao-cancelar" type="button" mat-stroked-button aria-label="Close" (click)="modal.dismiss('Cross click')">Cancelar
+          <mat-icon>close</mat-icon>
+       </button>
+ 
+ 
+    </div>
+ 
+ </ng-template>
+ 
+ <button class="btn btn-outline-primary float-right botao-add-aluno" (click)="open(content)">
+    <mat-icon>add_circle</mat-icon>
+ </button>

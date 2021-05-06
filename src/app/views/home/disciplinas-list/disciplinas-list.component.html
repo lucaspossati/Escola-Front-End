@@ -1,35 +1,42 @@
+
+<app-cadastrar-disciplina></app-cadastrar-disciplina>
+
 <table style="width: 100%; text-align: center; ">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Id do Aluno</th>
-            <th>Nome do Livro</th>
-            <th>Ano de Lançamento</th>
-            <th>Genero</th>
-            <th>RA do Aluno</th>
+            <th>Nome da Disciplina</th>
+            <th>Nome do Professor</th>
+            <th>Ementa</th>
+            <th>Curso</th>
+            <th>Periodo</th>
         </tr>
         
     </thead>
 
     <tbody>
-        <tr *ngFor="let discliplina of disciplinas">
+        <tr *ngFor="let disciplina of disciplinas">
             <td>
-                {{discliplina.Id}}
+                {{disciplina.Id}}
             </td>
             <td>
-                {{discliplina.NomeDisciplina}}
+                {{disciplina.NomeDisciplina}}
             </td>
             <td>
-                {{discliplina.NomeProfessor}}
+                {{disciplina.NomeProfessor}}
             </td>
             <td>
-                {{discliplina.Ementa}}
+                {{disciplina.Ementa}}
             </td>
             <td>
-                {{discliplina.Curso}}
+                {{disciplina.Curso}}
             </td>
             <td>
-                {{discliplina.Periodo}}
+                {{disciplina.Periodo}}
+            </td>
+            <td>
+                <a class="pointer" type="submit" (click)="alertConfirmarDeleteDisciplina(disciplina.Id, disciplina.NomeDisciplina)" title="Excluir"><mat-icon class="mat-delete">delete</mat-icon></a>
+                <!-- <button type="submit" mat-stroked-button color="green" (click)="deletarAlunos(aluno.Id)"  style="float: center;"><mat-icon class="mat-delete">delete</mat-icon></button> -->
             </td>
         </tr>
     </tbody>   

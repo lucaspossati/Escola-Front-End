@@ -1,10 +1,13 @@
 export class Aluno{
     content: any[];
-    id: string;
-    dataNascimento: number;
-    ra: number;
-    curso: string;
-    semestre: number;
-    teste: string;  
+    Id: number;
+    Nome: string;
+    DatadeNascimento: number;
+    RA: number;
+    Curso: string;
+    Semestre: number;
+    Login: string;
+    Senha: string;
+    
 }
 

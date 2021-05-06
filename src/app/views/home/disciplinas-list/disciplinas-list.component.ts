@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Disciplina } from 'src/app/shared/model/disciplina.model';
 import { DisciplinaService } from 'src/app/shared/service/disciplina.service';
+import Swal from 'sweetalert2';
+import { AccountService } from '../account/shared/account/account.service';
 
 @Component({
   selector: 'app-disciplinas-list',
@@ -10,9 +12,11 @@ import { DisciplinaService } from 'src/app/shared/service/disciplina.service';
 export class DisciplinasListComponent implements OnInit {
 
   disciplinas: Disciplina[];
+  disciplina: any[];
 
   constructor(
-    public disciplinaService: DisciplinaService
+    public disciplinaService: DisciplinaService,
+    public accountService: AccountService,
   ) { }
 
   ngOnInit(): void {
@@ -22,8 +26,68 @@ export class DisciplinasListComponent implements OnInit {
   getDisciplinas(){
     this.disciplinaService.getDisciplinasWithFlag('id').subscribe(data => {
       this.disciplinas = data;
-      console.log(this.disciplinas);
+      
     })
   }
+
+  deletarDisciplinas(disciplinaId) {
+    this.accountService.deletarDisciplinas(disciplinaId).subscribe(data => {
+
+      if (data != null) {
+        this.alertErroAoExcluir();
+      }
+      else {
+        this.alertDisciplinaExcluida();
+      }
+
+    })
+  }
+
+  alertConfirmarDeleteDisciplina(disciplinaId, nomeDisciplina) {
+
+    Swal.fire({
+      title: 'Deseja realmente excluir a disciplina ' + nomeDisciplina + '?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.value) {
+        this.deletarDisciplinas(disciplinaId);
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire(
+          'Cancelado',
+          'A disciplina não foi excluida :)',
+          'error'
+        )
+      }
+    })
+  }
+
+
+  alertDisciplinaExcluida() {
+
+    Swal.fire({
+      title: 'Disciplina deletada com sucesso',
+      icon: 'success',
+      confirmButtonText: 'Fechar',
+    }).then((result) => {
+      this.refresh();
+    })
+  }
+
+  alertErroAoExcluir() {
+
+    Swal.fire({
+      title: 'Não foi possivel excluir a disciplina',
+      icon: 'error',
+      confirmButtonText: 'Fechar',
+    })
+  }
+
+  refresh(): void {
+    window.location.reload();
+  }
+  
 
 }

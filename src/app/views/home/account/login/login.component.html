@@ -1,29 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="container">
+    <form #form="ngForm" class="formulario">
+
+      <img src="assets/img/iconProfile.png" alt="Image Login" width="110">
+      <div class="form-group">
+
+        <input matInput placeholder="Usuário" class="form-control" type="text" name="login" id="login"
+          [(ngModel)]="login.login" required [disabled]="carregando == true" />
+
+      </div>
+      <div class="form-group">
+
+        <input placeholder="Senha" class="form-control" type="password" name="senha" id="senha"
+          [(ngModel)]="login.senha" required [disabled]="carregando == true" />
+      </div>
+
+      <div *ngIf="cont > 2" class="recaptcha">
+
+        <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" (expire)="handleExpire()" (load)="handleLoad()"
+          (success)="handleSuccess()" [(ngModel)]="captcha" [ngModelOptions]="{standalone: true}">
+        </ngx-recaptcha2>
+
+      </div>
 
 
-<div class="containerMain"></div>
+      <button class="btn btn-primary btn-block"
+        [disabled]="form.invalid || carregando == true || (captchaValidation == false && cont > 2 )"
+        (click)="loginFn()">Entrar <mat-icon>login</mat-icon></button><br>
 
-<h2 class="text-center">Entrar</h2>
+      <div *ngIf="carregando == true">
+        <mat-spinner [diameter]="30" class="loading"></mat-spinner>
+      </div>
 
-<div class="container"  style="width: 500px;">
-<form #form="ngForm">
-  <div class="form-group">
-    <label>Usuario</label><br>
-    <input class="form-control" type="text" name="login" id="login" [(ngModel)]="login.login" required [disabled]="carregando == true"/>
+
+      <p *ngIf="senhaInvalida == true" style="color: red;margin-top: 25px;">Usuário ou senha inválidos. Tente novamente!
+      </p>
+
+    </form>
   </div>
-  <div class="form-group">
-    <label>Senha</label><br>
-    <input class="form-control" type="password" name="senha" id="senha" [(ngModel)]="login.senha" required [disabled]="carregando == true" />
-  </div>
-  <button class="btn btn-primary btn-block" [disabled]="form.invalid || carregando == true" (click)="loginFn()">Entrar <mat-icon >login</mat-icon></button><br>
-  <div *ngIf="loading == true" >
-    <mat-spinner [diameter]="30" style="margin-left: 36%;"></mat-spinner>
-  </div>
-  <p *ngIf="senhaInvalida == true" style="color: red;">Usuário ou senha inválidos. Tente novamente!</p>
+</body>
 
-  
-  <ngx-recaptcha2 #captchaElem [siteKey]="siteKey"></ngx-recaptcha2>
-  
-</form>
-</div>
-
-<div ngfor></div>
+</html>

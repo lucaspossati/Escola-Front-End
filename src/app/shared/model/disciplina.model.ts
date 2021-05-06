@@ -1,10 +1,10 @@
 export class Disciplina{
     content: any[];
-    id: string;
-    nomeDisciplina: string;
-    nomeProfessor: string;
-    ementa: string;
-    curso: string;
-    periodo: number;
+    Id: string;
+    NomeDisciplina: string;
+    NomeProfessor: string;
+    Ementa: string;
+    Curso: string;
+    Periodo: number;
     
 }

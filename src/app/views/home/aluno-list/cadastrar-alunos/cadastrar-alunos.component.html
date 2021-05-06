@@ -1,52 +1,70 @@
+<ng-template #content let-modal>
+   
+   <div class="modal-body  align-center">
 
-   <mat-form-field class="example-full-width">
-      <mat-label>Id</mat-label>
-      <input matInput placeholder="id" [(ngModel)]="aluno.Id" name="filterName"  required>
-      <button type="submit" mat-stroked-button color="green" (click)="getAlunosbyID()" style="float: right;" >Pesquisar</button>
-   </mat-form-field>
+      <h1 class="modal-title" id="modal-basic-title">Cadastrar Aluno
+      </h1>
 
-  
-   
-   <mat-form-field class="example-full-width">
-   <mat-label>Nome</mat-label>
-   <input matInput placeholder="nome"   [(ngModel)]="aluno.Nome" name="nome"  required>
-   
-   </mat-form-field>
-   
-   
-   <mat-form-field class="example-full-width">
-      <mat-label>Data de Nascimento</mat-label>
-      <input matInput placeholder="DatadeNascimento" [(ngModel)]="aluno.DatadeNascimento" name="filterName" required>
-   </mat-form-field>
-   
-   <mat-form-field class="example-full-width">
-      <mat-label>RA</mat-label>
-      <input matInput placeholder="ra" [(ngModel)]="aluno.RA" name="filterName" required>
-   </mat-form-field>
-   
-   <mat-form-field class="example-full-width">
-   <mat-label>Curso</mat-label>
-   <input matInput placeholder="curso" [(ngModel)]="aluno.Curso" name="filterName" required>
-   </mat-form-field>
-   
-   <mat-form-field class="example-full-width">
-      <mat-label>Semestre</mat-label>
-      <input matInput placeholder="semestre" [(ngModel)]="aluno.Semestre" name="filterName" required>
-   </mat-form-field>
-   
-   <mat-form-field class="example-full-width">
-      <mat-label>Login</mat-label>
-      <input matInput placeholder="login" [(ngModel)]="aluno.Login" name="filterName" required>
-   </mat-form-field>
-   
-   <mat-form-field class="example-full-width">
-      <mat-label>Senha</mat-label>
-      <input type="password" matInput placeholder="senha" [(ngModel)]="aluno.Senha" name="filterName" required email>
-   </mat-form-field>
-   
-   <button type="submit" mat-stroked-button color="green" (click)="criarAlunos()">Salvar</button>
-   
-   <p *ngIf="alunoSalvo == true" style="color: rgb(14, 135, 14); margin-top: 15px;"> Aluno cadastrado com sucesso ! </p>
-   <p *ngIf="alunoSalvo == false" style="color: red; margin-top: 15px;"> Erro ao cadastrar o aluno ! </p>
+      <mat-form-field class="example-full-width">
+         <mat-label>Id</mat-label>
+         <input matInput placeholder="id" (keyup.enter)="getAlunosbyID(aluno.Id)" [(ngModel)]="aluno.Id"
+            name="filterName" required>
+
+      </mat-form-field>
+
+      <button type="submit" mat-stroked-button color="green" (click)="getAlunosbyID(aluno.Id)"
+         style="float: center;">Pesquisar <mat-icon>search</mat-icon>
+      </button>
+
+      <mat-form-field class="example-full-width">
+         <mat-label>Nome</mat-label>
+         <input matInput placeholder="nome" [(ngModel)]="aluno.Nome" name="nome" required>
+
+      </mat-form-field>
 
 
+      <mat-form-field class="example-full-width">
+         <mat-label>Data de Nascimento</mat-label>
+         <input matInput placeholder="DatadeNascimento" [(ngModel)]="aluno.DatadeNascimento" name="filterName" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+         <mat-label>RA</mat-label>
+         <input matInput placeholder="ra" [(ngModel)]="aluno.RA" name="filterName" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+         <mat-label>Curso</mat-label>
+         <input matInput placeholder="curso" [(ngModel)]="aluno.Curso" name="filterName" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+         <mat-label>Semestre</mat-label>
+         <input matInput placeholder="semestre" [(ngModel)]="aluno.Semestre" name="filterName" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+         <mat-label>Login</mat-label>
+         <input matInput placeholder="login" [(ngModel)]="aluno.Login" name="filterName" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+         <mat-label>Senha</mat-label>
+         <input type="password" matInput placeholder="senha" [(ngModel)]="aluno.Senha" name="filterName" required email>
+      </mat-form-field>
+
+      <button class="float-none botao-salvar" type="submit" mat-stroked-button color="green" (click)="criarAlunos()">Salvar
+         <mat-icon>save</mat-icon>
+      </button>
+      <button class="float-none botao-cancelar" type="button" mat-stroked-button aria-label="Close" (click)="modal.dismiss('Cross click')">Cancelar
+         <mat-icon>close</mat-icon>
+      </button>
+
+
+   </div>
+
+</ng-template>
+
+<button class="btn btn-outline-primary float-right botao-add-aluno" (click)="open(content)">
+   <mat-icon>person_add</mat-icon>
+</button>

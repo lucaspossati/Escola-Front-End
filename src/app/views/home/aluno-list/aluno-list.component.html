@@ -1,4 +1,11 @@
+
+  
+<app-cadastrar-alunos></app-cadastrar-alunos>
+  
+
 <table style="width: 100%; text-align: center;">
+
+
     <thead>
         
         <tr>
@@ -33,6 +40,11 @@
             <td>
                 {{aluno.Semestre}}
             </td>
+            <td>
+                <a class="pointer" type="submit" (click)="alertConfirmarDeleteAluno(aluno.Id, aluno.Nome)" title="Excluir"><mat-icon class="mat-delete">delete</mat-icon></a>
+                <!-- <button type="submit" mat-stroked-button color="green" (click)="deletarAlunos(aluno.Id)"  style="float: center;"><mat-icon class="mat-delete">delete</mat-icon></button> -->
+            </td>
+
         </tr>
     </tbody>
     
